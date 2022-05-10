@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: frontend
+    restart: always
+    build: ./project_frontend
+    ports: ['8660:8660']
+  back:
+    # depends_on:
+    #   - mongodb
+    container_name: backend
+    restart: always
+    build: ./project_backend
+    ports: ['1111:1111']
+  
